@@ -71,7 +71,7 @@ def create_hero():
         datetime.datetime.strptime(request.json['appearance_date'],'%m-%Y')
     except ValueError:
         abort(make_response(jsonify( { 'appearance_date': 'Invalid date format' } ), 400))
-# url validation
+# url validation 
     try:
         urllib.urlopen(request.json['web_page'])
     except IOError:
